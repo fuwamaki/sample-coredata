@@ -22,6 +22,8 @@
 		20169B7F27C0D56200CAF28F /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20169B7E27C0D56200CAF28F /* NibLoadable.swift */; };
 		20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */; };
 		20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */; };
+		20D4DEF527C0DC2300C7258A /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */; };
+		20D4DEF727C0DC6400C7258A /* FruitListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D4DEF627C0DC6400C7258A /* FruitListViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		20169B7E27C0D56200CAF28F /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
+		20D4DEF627C0DC6400C7258A /* FruitListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitListViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				20169B5727C0CBCF00CAF28F /* MainViewController.swift */,
+				20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			children = (
 				20169B6127C0CBCF00CAF28F /* LaunchScreen.storyboard */,
 				20169B5927C0CBCF00CAF28F /* MainViewController.storyboard */,
+				20D4DEF627C0DC6400C7258A /* FruitListViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			files = (
 				20169B6327C0CBCF00CAF28F /* LaunchScreen.storyboard in Resources */,
 				20169B6027C0CBCF00CAF28F /* Assets.xcassets in Resources */,
+				20D4DEF727C0DC6400C7258A /* FruitListViewController.storyboard in Resources */,
 				20169B5B27C0CBCF00CAF28F /* MainViewController.storyboard in Resources */,
 				20169B7827C0D47F00CAF28F /* MainTableCell.xib in Resources */,
 			);
@@ -243,6 +250,7 @@
 				20169B5E27C0CBCF00CAF28F /* SampleCoreData.xcdatamodeld in Sources */,
 				20169B7F27C0D56200CAF28F /* NibLoadable.swift in Sources */,
 				20169B5827C0CBCF00CAF28F /* MainViewController.swift in Sources */,
+				20D4DEF527C0DC2300C7258A /* FruitListViewController.swift in Sources */,
 				20169B7C27C0D52A00CAF28F /* UICollectionViewCell+Extension.swift in Sources */,
 				20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */,
 				20169B7427C0D43A00CAF28F /* MainTableCell.swift in Sources */,

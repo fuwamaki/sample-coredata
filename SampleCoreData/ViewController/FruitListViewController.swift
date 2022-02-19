@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  FruitListViewController.swift
 //  SampleCoreData
 //
 //  Created by fuwamaki on 2022/02/19.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class FruitListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         }
     }
 
-    private var list: [String] = ["Fruit", "CoreData2"]
+    private var list: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
 }
 
 // MARK: UITableViewDataSource
-extension MainViewController: UITableViewDataSource {
+extension FruitListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
@@ -41,15 +41,8 @@ extension MainViewController: UITableViewDataSource {
 }
 
 // MARK: UITableViewDelegate
-extension MainViewController: UITableViewDelegate {
+extension FruitListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        switch indexPath.row {
-        case 0:
-            let storyBoard = UIStoryboard(name: "FruitListViewController", bundle: nil)
-            let viewController = storyBoard.instantiateViewController(withIdentifier: "FruitListViewController")
-            navigationController?.pushViewController(viewController, animated: true)
-        default: break
-        }
     }
 }
