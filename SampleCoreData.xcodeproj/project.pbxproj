@@ -58,16 +58,40 @@
 		20169B5227C0CBCF00CAF28F /* SampleCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				20169B5327C0CBCF00CAF28F /* AppDelegate.swift */,
-				20169B5527C0CBCF00CAF28F /* SceneDelegate.swift */,
-				20169B5727C0CBCF00CAF28F /* ViewController.swift */,
-				20169B5927C0CBCF00CAF28F /* Main.storyboard */,
-				20169B5F27C0CBCF00CAF28F /* Assets.xcassets */,
-				20169B6127C0CBCF00CAF28F /* LaunchScreen.storyboard */,
 				20169B6427C0CBCF00CAF28F /* Info.plist */,
-				20169B5C27C0CBCF00CAF28F /* SampleCoreData.xcdatamodeld */,
+				20169B6A27C0CC3600CAF28F /* AppDelegate */,
+				20169B6B27C0CC3F00CAF28F /* ViewController */,
+				20169B6C27C0CC4500CAF28F /* Resources */,
 			);
 			path = SampleCoreData;
+			sourceTree = "<group>";
+		};
+		20169B6A27C0CC3600CAF28F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				20169B5327C0CBCF00CAF28F /* AppDelegate.swift */,
+				20169B5527C0CBCF00CAF28F /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		20169B6B27C0CC3F00CAF28F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20169B5727C0CBCF00CAF28F /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		20169B6C27C0CC4500CAF28F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20169B5F27C0CBCF00CAF28F /* Assets.xcassets */,
+				20169B5C27C0CBCF00CAF28F /* SampleCoreData.xcdatamodeld */,
+				20169B5927C0CBCF00CAF28F /* Main.storyboard */,
+				20169B6127C0CBCF00CAF28F /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
