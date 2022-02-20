@@ -13,14 +13,16 @@ final class FruitListViewController: UIViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.registerForCell(MainTableCell.self)
+            tableView.registerForCell(FruitListTableCell.self)
         }
     }
 
-    private var list: [String] = []
+    private var list: [FruitEntity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        list = CoreDataRepository().array(String(describing: FruitEntity.self)) as! [FruitEntity]
+        tableView.reloadData()
     }
 }
 
@@ -32,9 +34,9 @@ extension FruitListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: MainTableCell.defaultReuseIdentifier,
+            withIdentifier: FruitListTableCell.defaultReuseIdentifier,
             for: indexPath
-        ) as! MainTableCell
+        ) as! FruitListTableCell
         cell.render(list[indexPath.row])
         return cell
     }

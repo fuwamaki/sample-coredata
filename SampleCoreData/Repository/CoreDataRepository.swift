@@ -13,7 +13,7 @@ class CoreDataRepository {
     init() {}
 
     private static var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Korenani")
+        let container = NSPersistentContainer(name: "SampleCoreData")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -90,11 +90,11 @@ extension CoreDataRepository {
 }
 
 // MARK: seeds
-//extension CoreDataRepository {
-//    func seeds() {
-//        guard array(String(describing: TestEntity.self)).isEmpty else { return }
-//        ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
-//            .compactMap { Test(message: $0).entity }
-//            .forEach { add($0) }
-//    }
-//}
+extension CoreDataRepository {
+    func seeds() {
+        guard array(String(describing: FruitEntity.self)).isEmpty else { return }
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+            .compactMap { FruitEntity.create(name: $0) }
+            .forEach { add($0) }
+    }
+}
