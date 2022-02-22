@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CoreData
 
 final class ShapeListViewController: UIViewController {
 
@@ -17,8 +19,17 @@ final class ShapeListViewController: UIViewController {
         }
     }
 
+    private(set) var listSubject = CurrentValueSubject<[ShapeEntity], Never>([])
+    private var subscriptions = Set<AnyCancellable>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        CoreDataRepository.coreDataPublisher()
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: { [weak self] entities in
+                self?.listSubject.send(entities)
+            })
+            .store(in: &subscriptions)
     }
 }
 

@@ -30,6 +30,8 @@
 		20BBF95527C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95427C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift */; };
 		20BBF95727C4DBA000D6F6CB /* ShapeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95627C4DBA000D6F6CB /* ShapeListViewController.swift */; };
 		20BBF95927C4DBD300D6F6CB /* ShapeListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF95827C4DBD300D6F6CB /* ShapeListViewController.storyboard */; };
+		20BBF95C27C4F96500D6F6CB /* ShapeEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95A27C4F96500D6F6CB /* ShapeEntity+CoreDataClass.swift */; };
+		20BBF95D27C4F96500D6F6CB /* ShapeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95B27C4F96500D6F6CB /* ShapeEntity+CoreDataProperties.swift */; };
 		20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */; };
 		20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */; };
 		20D4DEF527C0DC2300C7258A /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */; };
@@ -62,6 +64,8 @@
 		20BBF95427C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataRepository+Publisher.swift"; sourceTree = "<group>"; };
 		20BBF95627C4DBA000D6F6CB /* ShapeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeListViewController.swift; sourceTree = "<group>"; };
 		20BBF95827C4DBD300D6F6CB /* ShapeListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapeListViewController.storyboard; sourceTree = "<group>"; };
+		20BBF95A27C4F96500D6F6CB /* ShapeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20BBF95B27C4F96500D6F6CB /* ShapeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 			children = (
 				20BBF94427C2254300D6F6CB /* FruitEntity+CoreDataClass.swift */,
 				20BBF94527C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift */,
+				20BBF95A27C4F96500D6F6CB /* ShapeEntity+CoreDataClass.swift */,
+				20BBF95B27C4F96500D6F6CB /* ShapeEntity+CoreDataProperties.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -294,9 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BBF95C27C4F96500D6F6CB /* ShapeEntity+CoreDataClass.swift in Sources */,
 				20169B7027C0CD9A00CAF28F /* CoreDataRepository.swift in Sources */,
 				20169B7A27C0D50D00CAF28F /* UICollectionView+Extension.swift in Sources */,
 				20169B5E27C0CBCF00CAF28F /* SampleCoreData.xcdatamodeld in Sources */,
+				20BBF95D27C4F96500D6F6CB /* ShapeEntity+CoreDataProperties.swift in Sources */,
 				20169B7F27C0D56200CAF28F /* NibLoadable.swift in Sources */,
 				20BBF94627C2254300D6F6CB /* FruitEntity+CoreDataClass.swift in Sources */,
 				20169B5827C0CBCF00CAF28F /* MainViewController.swift in Sources */,

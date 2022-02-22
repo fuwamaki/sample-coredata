@@ -3,7 +3,12 @@
     <entity name="FruitEntity" representedClassName="FruitEntity" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="ShapeEntity" representedClassName="ShapeEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="FruitEntity" positionX="-54" positionY="-9" width="128" height="44"/>
+        <element name="ShapeEntity" positionX="-36" positionY="18" width="128" height="59"/>
     </elements>
 </model>
