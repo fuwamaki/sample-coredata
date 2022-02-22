@@ -34,6 +34,7 @@
 		20BBF95D27C4F96500D6F6CB /* ShapeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95B27C4F96500D6F6CB /* ShapeEntity+CoreDataProperties.swift */; };
 		20BBF95F27C5097000D6F6CB /* ShapeListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF95E27C5097000D6F6CB /* ShapeListTableCell.xib */; };
 		20BBF96127C5098F00D6F6CB /* ShapeListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF96027C5098F00D6F6CB /* ShapeListTableCell.swift */; };
+		20BBF96427C5299100D6F6CB /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 20BBF96327C5299100D6F6CB /* CombineCocoa */; };
 		20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */; };
 		20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */; };
 		20D4DEF527C0DC2300C7258A /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */; };
@@ -81,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BBF96427C5299100D6F6CB /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +248,9 @@
 			dependencies = (
 			);
 			name = SampleCoreData;
+			packageProductDependencies = (
+				20BBF96327C5299100D6F6CB /* CombineCocoa */,
+			);
 			productName = SampleCoreData;
 			productReference = 20169B5027C0CBCF00CAF28F /* SampleCoreData.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +279,9 @@
 				Base,
 			);
 			mainGroup = 20169B4727C0CBCF00CAF28F;
+			packageReferences = (
+				20BBF96227C5299100D6F6CB /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+			);
 			productRefGroup = 20169B5127C0CBCF00CAF28F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -548,6 +556,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20BBF96227C5299100D6F6CB /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20BBF96327C5299100D6F6CB /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20BBF96227C5299100D6F6CB /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		20169B5C27C0CBCF00CAF28F /* SampleCoreData.xcdatamodeld */ = {
