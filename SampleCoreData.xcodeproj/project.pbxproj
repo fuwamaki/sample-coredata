@@ -24,6 +24,8 @@
 		20BBF94727C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF94527C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift */; };
 		20BBF94A27C227EC00D6F6CB /* FruitListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF94927C227EC00D6F6CB /* FruitListTableCell.swift */; };
 		20BBF94C27C2283400D6F6CB /* FruitListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF94B27C2283400D6F6CB /* FruitListTableCell.xib */; };
+		20BBF94E27C4A41800D6F6CB /* PlusTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF94D27C4A41800D6F6CB /* PlusTableCell.swift */; };
+		20BBF95027C4A42600D6F6CB /* PlusTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF94F27C4A42600D6F6CB /* PlusTableCell.xib */; };
 		20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */; };
 		20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */; };
 		20D4DEF527C0DC2300C7258A /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */; };
@@ -50,6 +52,8 @@
 		20BBF94527C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FruitEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		20BBF94927C227EC00D6F6CB /* FruitListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListTableCell.swift; sourceTree = "<group>"; };
 		20BBF94B27C2283400D6F6CB /* FruitListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitListTableCell.xib; sourceTree = "<group>"; };
+		20BBF94D27C4A41800D6F6CB /* PlusTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusTableCell.swift; sourceTree = "<group>"; };
+		20BBF94F27C4A42600D6F6CB /* PlusTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlusTableCell.xib; sourceTree = "<group>"; };
 		20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			children = (
 				20169B7327C0D43A00CAF28F /* MainTableCell.swift */,
 				20BBF94927C227EC00D6F6CB /* FruitListTableCell.swift */,
+				20BBF94D27C4A41800D6F6CB /* PlusTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			children = (
 				20169B7727C0D47F00CAF28F /* MainTableCell.xib */,
 				20BBF94B27C2283400D6F6CB /* FruitListTableCell.xib */,
+				20BBF94F27C4A42600D6F6CB /* PlusTableCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 				20169B6027C0CBCF00CAF28F /* Assets.xcassets in Resources */,
 				20D4DEF727C0DC6400C7258A /* FruitListViewController.storyboard in Resources */,
 				20BBF94C27C2283400D6F6CB /* FruitListTableCell.xib in Resources */,
+				20BBF95027C4A42600D6F6CB /* PlusTableCell.xib in Resources */,
 				20169B5B27C0CBCF00CAF28F /* MainViewController.storyboard in Resources */,
 				20169B7827C0D47F00CAF28F /* MainTableCell.xib in Resources */,
 			);
@@ -276,6 +283,7 @@
 				20BBF94A27C227EC00D6F6CB /* FruitListTableCell.swift in Sources */,
 				20169B7C27C0D52A00CAF28F /* UICollectionViewCell+Extension.swift in Sources */,
 				20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */,
+				20BBF94E27C4A41800D6F6CB /* PlusTableCell.swift in Sources */,
 				20BBF94727C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift in Sources */,
 				20169B7427C0D43A00CAF28F /* MainTableCell.swift in Sources */,
 				20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */,
