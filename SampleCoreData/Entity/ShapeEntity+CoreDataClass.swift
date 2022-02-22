@@ -11,5 +11,13 @@ import CoreData
 
 @objc(ShapeEntity)
 public class ShapeEntity: NSManagedObject {
+    static func new(shapeName: String) -> ShapeEntity {
+        let entity: ShapeEntity = CoreDataRepository.entity((String(describing: ShapeEntity.self)))
+        entity.name = shapeName
+        return entity
+    }
 
+    func update(newName: String) {
+        self.name = newName
+    }
 }

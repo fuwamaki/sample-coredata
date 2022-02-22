@@ -14,8 +14,16 @@ final class ShapeListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
-            tableView.registerForCell(FruitListTableCell.self)
+            tableView.registerForCell(ShapeListTableCell.self)
             tableView.registerForCell(PlusTableCell.self)
+
+            listSubject
+                .sink(receiveValue: tableView.items({ tableView, indexPath, item in
+                    let cell = tableView.dequeueCellForIndexPath(indexPath) as ShapeListTableCell
+                    cell.render(item)
+                    return cell
+                }))
+                .store(in: &subscriptions)
         }
     }
 

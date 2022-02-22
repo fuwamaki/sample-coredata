@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         }
     }
 
-    private var list: [String] = ["Fruit", "CoreData2"]
+    private var list: [String] = ["Fruit", "Shape"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

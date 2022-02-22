@@ -73,10 +73,17 @@ extension CoreDataRepository {
 
 // MARK: seeds
 extension CoreDataRepository {
-    static func seeds() {
+    static func seedsFruit() {
         guard array(String(describing: FruitEntity.self)).isEmpty else { return }
         ["Apple", "Banana", "Peach", "Orange", "Grape", "Pineapple", "Melon"]
             .compactMap { FruitEntity.new(fruitName: $0) }
+            .forEach { add($0) }
+    }
+
+    static func seedsShape() {
+        guard array(String(describing: ShapeEntity.self)).isEmpty else { return }
+        ["Triangle", "Rectangle", "Circle", "Oval", "Square"]
+            .compactMap { ShapeEntity.new(shapeName: $0) }
             .forEach { add($0) }
     }
 }

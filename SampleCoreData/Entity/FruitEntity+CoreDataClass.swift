@@ -12,7 +12,7 @@ import CoreData
 @objc(FruitEntity)
 public class FruitEntity: NSManagedObject {
     static func new(fruitName: String) -> FruitEntity {
-        let entity = CoreDataRepository.entity((String(describing: FruitEntity.self))) as! FruitEntity
+        let entity: FruitEntity = CoreDataRepository.entity((String(describing: FruitEntity.self)))
         entity.name = fruitName
         return entity
     }

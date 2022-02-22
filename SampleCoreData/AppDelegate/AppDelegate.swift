@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        CoreDataRepository.seeds()
+        CoreDataRepository.seedsFruit()
+        CoreDataRepository.seedsShape()
         return true
     }
 
