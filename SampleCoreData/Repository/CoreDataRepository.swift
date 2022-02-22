@@ -21,7 +21,7 @@ class CoreDataRepository {
         return container
     }()
 
-    private static var context: NSManagedObjectContext {
+    internal static var context: NSManagedObjectContext {
         return CoreDataRepository.persistentContainer.viewContext
     }
 }

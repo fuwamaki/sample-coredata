@@ -26,6 +26,8 @@
 		20BBF94C27C2283400D6F6CB /* FruitListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF94B27C2283400D6F6CB /* FruitListTableCell.xib */; };
 		20BBF94E27C4A41800D6F6CB /* PlusTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF94D27C4A41800D6F6CB /* PlusTableCell.swift */; };
 		20BBF95027C4A42600D6F6CB /* PlusTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF94F27C4A42600D6F6CB /* PlusTableCell.xib */; };
+		20BBF95327C4D9F700D6F6CB /* CoreDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95227C4D9F700D6F6CB /* CoreDataPublisher.swift */; };
+		20BBF95527C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95427C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift */; };
 		20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */; };
 		20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */; };
 		20D4DEF527C0DC2300C7258A /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */; };
@@ -54,6 +56,8 @@
 		20BBF94B27C2283400D6F6CB /* FruitListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitListTableCell.xib; sourceTree = "<group>"; };
 		20BBF94D27C4A41800D6F6CB /* PlusTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusTableCell.swift; sourceTree = "<group>"; };
 		20BBF94F27C4A42600D6F6CB /* PlusTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlusTableCell.xib; sourceTree = "<group>"; };
+		20BBF95227C4D9F700D6F6CB /* CoreDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPublisher.swift; sourceTree = "<group>"; };
+		20BBF95427C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataRepository+Publisher.swift"; sourceTree = "<group>"; };
 		20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				20169B7227C0D41900CAF28F /* View */,
 				20BBF94827C2254A00D6F6CB /* Entity */,
 				20169B6D27C0CD6300CAF28F /* Repository */,
+				20BBF95127C4D9EA00D6F6CB /* Combine */,
 				20169B6C27C0CC4500CAF28F /* Resources */,
 				20169B7D27C0D55400CAF28F /* Protocol */,
 				20169B7127C0CF7B00CAF28F /* Extension */,
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				20169B6F27C0CD9A00CAF28F /* CoreDataRepository.swift */,
+				20BBF95427C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -196,6 +202,14 @@
 				20BBF94527C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		20BBF95127C4D9EA00D6F6CB /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				20BBF95227C4D9F700D6F6CB /* CoreDataPublisher.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +298,10 @@
 				20169B7C27C0D52A00CAF28F /* UICollectionViewCell+Extension.swift in Sources */,
 				20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */,
 				20BBF94E27C4A41800D6F6CB /* PlusTableCell.swift in Sources */,
+				20BBF95527C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift in Sources */,
 				20BBF94727C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift in Sources */,
 				20169B7427C0D43A00CAF28F /* MainTableCell.swift in Sources */,
+				20BBF95327C4D9F700D6F6CB /* CoreDataPublisher.swift in Sources */,
 				20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */,
 				20169B5427C0CBCF00CAF28F /* AppDelegate.swift in Sources */,
 				20169B5627C0CBCF00CAF28F /* SceneDelegate.swift in Sources */,
