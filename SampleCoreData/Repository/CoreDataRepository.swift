@@ -22,26 +22,28 @@ class CoreDataRepository {
         return container
     }()
 
-    private var context: NSManagedObjectContext {
+    private static var context: NSManagedObjectContext {
         return CoreDataRepository.persistentContainer.viewContext
-    }
-
-    func add(_ object: NSManagedObject) {
-        context.insert(object)
-    }
-
-//    func update(_ entity: TestEntity, newMessage: String) {
-//        entity.message = newMessage
-//    }
-
-    func delete(_ object: NSManagedObject) {
-        context.delete(object)
     }
 }
 
-// MARK: fetch
+// MARK: for Create
 extension CoreDataRepository {
-    func array<T: NSManagedObject>(_ name: String) -> [T] {
+    private static func entity<T: NSManagedObject>(_ name: String) -> T {
+        let entityDescription = NSEntityDescription.entity(forEntityName: name, in: context)!
+        return T(entity: entityDescription, insertInto: nil)
+    }
+
+    static func create(fruitName: String) -> FruitEntity {
+        let entity = entity((String(describing: FruitEntity.self))) as! FruitEntity
+        entity.name = fruitName
+        return entity
+    }
+}
+
+// MARK: CRUD
+extension CoreDataRepository {
+    static func array<T: NSManagedObject>(_ name: String) -> [T] {
         do {
             let request = NSFetchRequest<T>(entityName: name)
             return try context.fetch(request)
@@ -49,19 +51,23 @@ extension CoreDataRepository {
             fatalError()
         }
     }
-}
 
-// MARK: for Create
-extension CoreDataRepository {
-    func entity<T: NSManagedObject>(_ name: String) -> T {
-        let entityDescription = NSEntityDescription.entity(forEntityName: name, in: context)!
-        return T(entity: entityDescription, insertInto: nil)
+    static func add(_ object: NSManagedObject) {
+        context.insert(object)
+    }
+
+    static func delete(_ object: NSManagedObject) {
+        context.delete(object)
+    }
+
+    static func update(entity: FruitEntity, newName: String) {
+        entity.name = newName
     }
 }
 
-// MARK: REST functions
+// MARK: context CRUD
 extension CoreDataRepository {
-    func saveJob() {
+    static func save() {
         guard context.hasChanges else { return }
         do {
             try context.save()
@@ -69,21 +75,8 @@ extension CoreDataRepository {
             debugPrint("Error: \(error), \(error.userInfo)")
         }
     }
-}
 
-// MARK: async/await REST functions
-extension CoreDataRepository {
-    func save() async throws {
-        guard context.hasChanges else { return }
-        do {
-            try context.save()
-        } catch let error as NSError {
-            debugPrint("Error: \(error), \(error.userInfo)")
-            throw error
-        }
-    }
-
-    func rollback() async throws {
+    static func rollback() {
         guard context.hasChanges else { return }
         context.rollback()
     }
@@ -91,10 +84,10 @@ extension CoreDataRepository {
 
 // MARK: seeds
 extension CoreDataRepository {
-    func seeds() {
+    static func seeds() {
         guard array(String(describing: FruitEntity.self)).isEmpty else { return }
         ["Apple", "Banana", "Peach", "Orange", "Grape", "Pineapple", "Melon"]
-            .compactMap { FruitEntity.create(name: $0) }
+            .compactMap { create(fruitName: $0) }
             .forEach { add($0) }
     }
 }

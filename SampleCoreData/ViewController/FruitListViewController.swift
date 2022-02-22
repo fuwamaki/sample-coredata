@@ -22,7 +22,11 @@ final class FruitListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        list = CoreDataRepository().array(String(describing: FruitEntity.self)) as! [FruitEntity]
+        reload()
+    }
+
+    private func reload() {
+        list = CoreDataRepository.array(String(describing: FruitEntity.self)) as! [FruitEntity]
         tableView.reloadData()
     }
 }
@@ -62,6 +66,11 @@ extension FruitListViewController: UITableViewDelegate {
                 textField.delegate = self
             }
             alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { _ in
+                if let text = alert.textFields?.first?.text, !text.isEmpty {
+                    let newItem = CoreDataRepository.create(fruitName: text)
+                    CoreDataRepository.add(newItem)
+                    self.reload()
+                }
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             present(alert, animated: true)
@@ -72,6 +81,10 @@ extension FruitListViewController: UITableViewDelegate {
                 textField.text = self.list[indexPath.row].name
             }
             alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { _ in
+                if let text = alert.textFields?.first?.text, !text.isEmpty {
+                    CoreDataRepository.update(entity: self.list[indexPath.row], newName: text)
+                    self.reload()
+                }
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             present(alert, animated: true)
