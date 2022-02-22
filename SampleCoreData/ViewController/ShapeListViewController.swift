@@ -18,27 +18,48 @@ final class ShapeListViewController: UIViewController {
             tableView.registerForCell(PlusTableCell.self)
 
             listSubject
-                .sink(receiveValue: tableView.items({ tableView, indexPath, item in
-                    let cell = tableView.dequeueCellForIndexPath(indexPath) as ShapeListTableCell
-                    cell.render(item)
-                    return cell
-                }))
+                .sink(receiveValue: tableView.items { [unowned self] tableView, indexPath, item in
+                    switch indexPath.row {
+                    case self.listSubject.value.count-1:
+                        return tableView.dequeueReusableCell(
+                            withIdentifier: PlusTableCell.defaultReuseIdentifier,
+                            for: indexPath
+                        ) as! PlusTableCell
+                    default:
+                        let cell = tableView.dequeueReusableCell(
+                            withIdentifier: ShapeListTableCell.defaultReuseIdentifier,
+                            for: indexPath
+                        ) as! ShapeListTableCell
+                        cell.render(item)
+                        return cell
+                    }
+                })
                 .store(in: &subscriptions)
 
             tableView.didSelectRowPublisher
                 .sink { [unowned self] indexPath in
                     tableView.deselectRow(at: indexPath, animated: true)
-                    let alert = UIAlertController(title: "Edit", message: nil, preferredStyle: .alert)
-                    alert.addTextField { textField in
-                        textField.text = self.listSubject.value[indexPath.row].name
+                    switch indexPath.row {
+                    case self.listSubject.value.count-1:
+                        present(UIAlertController.textFieldAlert(
+                            title: "Add",
+                            actionText: "Create"
+                        ) { text in
+                            if let text = text, !text.isEmpty {
+                                CoreDataRepository.add(ShapeEntity.new(shapeName: text))
+                            }
+                        }, animated: true)
+                    default:
+                        present(UIAlertController.textFieldAlert(
+                            title: "Edit",
+                            actionText: "Update",
+                            textFieldText: self.listSubject.value[indexPath.row].name
+                        ) { text in
+                            if let text = text, !text.isEmpty {
+                                self.listSubject.value[indexPath.row].update(newName: text)
+                            }
+                        }, animated: true)
                     }
-                    alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { _ in
-                        if let text = alert.textFields?.first?.text, !text.isEmpty {
-                            self.listSubject.value[indexPath.row].update(newName: text)
-                        }
-                    }))
-                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                    self.present(alert, animated: true)
                 }
                 .store(in: &subscriptions)
         }
@@ -53,10 +74,11 @@ final class ShapeListViewController: UIViewController {
     }
 
     private func bind() {
-        CoreDataRepository.coreDataPublisher()
+        let publisher: CoreDataPublisher<ShapeEntity> = CoreDataRepository.coreDataPublisher()
+        publisher
             .sink(receiveCompletion: { _ in },
                   receiveValue: { [weak self] entities in
-                self?.listSubject.send(entities)
+                self?.listSubject.send(entities + [ShapeEntity.empty])
             })
             .store(in: &subscriptions)
     }

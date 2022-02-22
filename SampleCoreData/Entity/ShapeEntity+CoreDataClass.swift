@@ -17,6 +17,12 @@ public class ShapeEntity: NSManagedObject {
         return entity
     }
 
+    static var empty: ShapeEntity {
+        let entity: ShapeEntity = CoreDataRepository.entity((String(describing: ShapeEntity.self)))
+        entity.name = ""
+        return entity
+    }
+
     func update(newName: String) {
         self.name = newName
     }
