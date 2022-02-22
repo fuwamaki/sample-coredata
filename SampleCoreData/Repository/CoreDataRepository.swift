@@ -52,10 +52,6 @@ extension CoreDataRepository {
     static func delete(_ object: NSManagedObject) {
         context.delete(object)
     }
-
-    static func update(entity: FruitEntity, newName: String) {
-        entity.name = newName
-    }
 }
 
 // MARK: context CRUD

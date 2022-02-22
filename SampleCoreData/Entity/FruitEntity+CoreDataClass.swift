@@ -16,4 +16,8 @@ public class FruitEntity: NSManagedObject {
         entity.name = fruitName
         return entity
     }
+
+    func update(newName: String) {
+        self.name = newName
+    }
 }

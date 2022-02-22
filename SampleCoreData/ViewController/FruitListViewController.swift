@@ -91,7 +91,7 @@ extension FruitListViewController: UITableViewDelegate {
             }
             alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { _ in
                 if let text = alert.textFields?.first?.text, !text.isEmpty {
-                    CoreDataRepository.update(entity: self.list[indexPath.row], newName: text)
+                    self.list[indexPath.row].update(newName: text)
                     self.reload()
                 }
             }))
