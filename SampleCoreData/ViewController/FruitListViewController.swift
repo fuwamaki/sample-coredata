@@ -9,13 +9,23 @@ import UIKit
 
 final class FruitListViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView! {
+    @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
             tableView.registerForCell(FruitListTableCell.self)
             tableView.registerForCell(PlusTableCell.self)
         }
+    }
+
+    @IBAction private func clickRollbackButton(_ sender: UIBarButtonItem) {
+        CoreDataRepository.rollback()
+        reload()
+    }
+
+    @IBAction private func clickSaveButton(_ sender: UIBarButtonItem) {
+        CoreDataRepository.save()
+        reload()
     }
 
     private var list: [FruitEntity] = []

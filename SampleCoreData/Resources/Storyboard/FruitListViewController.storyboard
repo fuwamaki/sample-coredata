@@ -30,7 +30,20 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="btt-En-33U" secondAttribute="trailing" id="jL2-3e-QIh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="FruitList" id="n6e-g2-gHv"/>
+                    <navigationItem key="navigationItem" title="FruitList" id="n6e-g2-gHv">
+                        <rightBarButtonItems>
+                            <barButtonItem title="保存" id="hlw-Vg-0mj">
+                                <connections>
+                                    <action selector="clickSaveButton:" destination="Y6W-OH-hqX" id="ruu-Xq-nHJ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="戻す" id="14i-5X-8ck">
+                                <connections>
+                                    <action selector="clickRollbackButton:" destination="Y6W-OH-hqX" id="Svu-Kv-Dxx"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="btt-En-33U" id="fdA-wi-GIL"/>
