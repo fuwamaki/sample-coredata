@@ -32,6 +32,10 @@ final class ShapeListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind()
+    }
+
+    private func bind() {
         CoreDataRepository.coreDataPublisher()
             .sink(receiveCompletion: { _ in },
                   receiveValue: { [weak self] entities in
