@@ -71,29 +71,26 @@ extension FruitListViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case list.count:
-            let alert = UIAlertController(title: "Add", message: nil, preferredStyle: .alert)
-            alert.addTextField(configurationHandler: nil)
-            alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { _ in
-                if let text = alert.textFields?.first?.text, !text.isEmpty {
+            present(UIAlertController.textFieldAlert(
+                title: "Add",
+                actionText: "Create"
+            ) { text in
+                if let text = text, !text.isEmpty {
                     CoreDataRepository.add(FruitEntity.new(fruitName: text))
                     self.reload()
                 }
-            }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            present(alert, animated: true)
+            }, animated: true)
         default:
-            let alert = UIAlertController(title: "Edit", message: nil, preferredStyle: .alert)
-            alert.addTextField { textField in
-                textField.text = self.list[indexPath.row].name
-            }
-            alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { _ in
-                if let text = alert.textFields?.first?.text, !text.isEmpty {
+            present(UIAlertController.textFieldAlert(
+                title: "Edit",
+                actionText: "Update",
+                textFieldText: self.list[indexPath.row].name
+            ) { text in
+                if let text = text, !text.isEmpty {
                     self.list[indexPath.row].update(newName: text)
                     self.reload()
                 }
-            }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            present(alert, animated: true)
+            }, animated: true)
         }
     }
 

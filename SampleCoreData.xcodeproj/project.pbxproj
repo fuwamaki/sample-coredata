@@ -35,6 +35,7 @@
 		20BBF95F27C5097000D6F6CB /* ShapeListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF95E27C5097000D6F6CB /* ShapeListTableCell.xib */; };
 		20BBF96127C5098F00D6F6CB /* ShapeListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF96027C5098F00D6F6CB /* ShapeListTableCell.swift */; };
 		20BBF96427C5299100D6F6CB /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 20BBF96327C5299100D6F6CB /* CombineCocoa */; };
+		20BBF96627C52C1800D6F6CB /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF96527C52C1800D6F6CB /* UIAlertController+Extension.swift */; };
 		20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */; };
 		20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */; };
 		20D4DEF527C0DC2300C7258A /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */; };
@@ -71,6 +72,7 @@
 		20BBF95B27C4F96500D6F6CB /* ShapeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		20BBF95E27C5097000D6F6CB /* ShapeListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShapeListTableCell.xib; sourceTree = "<group>"; };
 		20BBF96027C5098F00D6F6CB /* ShapeListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeListTableCell.swift; sourceTree = "<group>"; };
+		20BBF96527C52C1800D6F6CB /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				20169B7B27C0D52A00CAF28F /* UICollectionViewCell+Extension.swift */,
 				20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */,
 				20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */,
+				20BBF96527C52C1800D6F6CB /* UIAlertController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				20BBF95527C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift in Sources */,
 				20BBF95727C4DBA000D6F6CB /* ShapeListViewController.swift in Sources */,
 				20BBF94727C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift in Sources */,
+				20BBF96627C52C1800D6F6CB /* UIAlertController+Extension.swift in Sources */,
 				20169B7427C0D43A00CAF28F /* MainTableCell.swift in Sources */,
 				20BBF95327C4D9F700D6F6CB /* CoreDataPublisher.swift in Sources */,
 				20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */,
