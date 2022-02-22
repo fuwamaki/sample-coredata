@@ -5,7 +5,6 @@
 //  Created by fuwamaki on 2022/02/19.
 //
 
-import UIKit
 import CoreData
 
 class CoreDataRepository {
@@ -34,7 +33,7 @@ extension CoreDataRepository {
         return T(entity: entityDescription, insertInto: nil)
     }
 
-    static func create(fruitName: String) -> FruitEntity {
+    static func new(fruitName: String) -> FruitEntity {
         let entity = entity((String(describing: FruitEntity.self))) as! FruitEntity
         entity.name = fruitName
         return entity
@@ -87,7 +86,7 @@ extension CoreDataRepository {
     static func seeds() {
         guard array(String(describing: FruitEntity.self)).isEmpty else { return }
         ["Apple", "Banana", "Peach", "Orange", "Grape", "Pineapple", "Melon"]
-            .compactMap { create(fruitName: $0) }
+            .compactMap { new(fruitName: $0) }
             .forEach { add($0) }
     }
 }

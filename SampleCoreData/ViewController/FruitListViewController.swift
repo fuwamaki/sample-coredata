@@ -77,7 +77,7 @@ extension FruitListViewController: UITableViewDelegate {
             }
             alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { _ in
                 if let text = alert.textFields?.first?.text, !text.isEmpty {
-                    let newItem = CoreDataRepository.create(fruitName: text)
+                    let newItem = CoreDataRepository.new(fruitName: text)
                     CoreDataRepository.add(newItem)
                     self.reload()
                 }
