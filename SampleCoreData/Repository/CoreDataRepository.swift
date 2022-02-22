@@ -93,7 +93,7 @@ extension CoreDataRepository {
 extension CoreDataRepository {
     func seeds() {
         guard array(String(describing: FruitEntity.self)).isEmpty else { return }
-        ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+        ["Apple", "Banana", "Peach", "Orange", "Grape", "Pineapple", "Melon"]
             .compactMap { FruitEntity.create(name: $0) }
             .forEach { add($0) }
     }
