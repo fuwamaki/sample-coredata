@@ -28,15 +28,9 @@ class CoreDataRepository {
 
 // MARK: for Create
 extension CoreDataRepository {
-    private static func entity<T: NSManagedObject>(_ name: String) -> T {
+    static func entity<T: NSManagedObject>(_ name: String) -> T {
         let entityDescription = NSEntityDescription.entity(forEntityName: name, in: context)!
         return T(entity: entityDescription, insertInto: nil)
-    }
-
-    static func new(fruitName: String) -> FruitEntity {
-        let entity = entity((String(describing: FruitEntity.self))) as! FruitEntity
-        entity.name = fruitName
-        return entity
     }
 }
 
@@ -86,7 +80,7 @@ extension CoreDataRepository {
     static func seeds() {
         guard array(String(describing: FruitEntity.self)).isEmpty else { return }
         ["Apple", "Banana", "Peach", "Orange", "Grape", "Pineapple", "Melon"]
-            .compactMap { new(fruitName: $0) }
+            .compactMap { FruitEntity.new(fruitName: $0) }
             .forEach { add($0) }
     }
 }
