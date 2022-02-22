@@ -28,6 +28,8 @@
 		20BBF95027C4A42600D6F6CB /* PlusTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF94F27C4A42600D6F6CB /* PlusTableCell.xib */; };
 		20BBF95327C4D9F700D6F6CB /* CoreDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95227C4D9F700D6F6CB /* CoreDataPublisher.swift */; };
 		20BBF95527C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95427C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift */; };
+		20BBF95727C4DBA000D6F6CB /* ShapeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BBF95627C4DBA000D6F6CB /* ShapeListViewController.swift */; };
+		20BBF95927C4DBD300D6F6CB /* ShapeListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BBF95827C4DBD300D6F6CB /* ShapeListViewController.storyboard */; };
 		20D4DEF127C0D64100C7258A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */; };
 		20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */; };
 		20D4DEF527C0DC2300C7258A /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */; };
@@ -58,6 +60,8 @@
 		20BBF94F27C4A42600D6F6CB /* PlusTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlusTableCell.xib; sourceTree = "<group>"; };
 		20BBF95227C4D9F700D6F6CB /* CoreDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPublisher.swift; sourceTree = "<group>"; };
 		20BBF95427C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataRepository+Publisher.swift"; sourceTree = "<group>"; };
+		20BBF95627C4DBA000D6F6CB /* ShapeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeListViewController.swift; sourceTree = "<group>"; };
+		20BBF95827C4DBD300D6F6CB /* ShapeListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapeListViewController.storyboard; sourceTree = "<group>"; };
 		20D4DEF027C0D64100C7258A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF227C0D64D00C7258A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			children = (
 				20169B5727C0CBCF00CAF28F /* MainViewController.swift */,
 				20D4DEF427C0DC2300C7258A /* FruitListViewController.swift */,
+				20BBF95627C4DBA000D6F6CB /* ShapeListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				20169B6127C0CBCF00CAF28F /* LaunchScreen.storyboard */,
 				20169B5927C0CBCF00CAF28F /* MainViewController.storyboard */,
 				20D4DEF627C0DC6400C7258A /* FruitListViewController.storyboard */,
+				20BBF95827C4DBD300D6F6CB /* ShapeListViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20169B6327C0CBCF00CAF28F /* LaunchScreen.storyboard in Resources */,
+				20BBF95927C4DBD300D6F6CB /* ShapeListViewController.storyboard in Resources */,
 				20169B6027C0CBCF00CAF28F /* Assets.xcassets in Resources */,
 				20D4DEF727C0DC6400C7258A /* FruitListViewController.storyboard in Resources */,
 				20BBF94C27C2283400D6F6CB /* FruitListTableCell.xib in Resources */,
@@ -299,6 +306,7 @@
 				20D4DEF327C0D64D00C7258A /* UITableViewCell+Extension.swift in Sources */,
 				20BBF94E27C4A41800D6F6CB /* PlusTableCell.swift in Sources */,
 				20BBF95527C4DA3900D6F6CB /* CoreDataRepository+Publisher.swift in Sources */,
+				20BBF95727C4DBA000D6F6CB /* ShapeListViewController.swift in Sources */,
 				20BBF94727C2254300D6F6CB /* FruitEntity+CoreDataProperties.swift in Sources */,
 				20169B7427C0D43A00CAF28F /* MainTableCell.swift in Sources */,
 				20BBF95327C4D9F700D6F6CB /* CoreDataPublisher.swift in Sources */,

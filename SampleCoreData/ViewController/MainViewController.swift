@@ -49,7 +49,10 @@ extension MainViewController: UITableViewDelegate {
             let storyBoard = UIStoryboard(name: "FruitListViewController", bundle: nil)
             let viewController = storyBoard.instantiateViewController(withIdentifier: "FruitListViewController")
             navigationController?.pushViewController(viewController, animated: true)
-        default: break
+        default:
+            let storyBoard = UIStoryboard(name: "ShapeListViewController", bundle: nil)
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "ShapeListViewController")
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
