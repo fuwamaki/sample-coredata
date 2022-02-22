@@ -8,12 +8,12 @@
 import UIKit
 import Combine
 import CoreData
+import CombineCocoa
 
 final class ShapeListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.delegate = self
             tableView.registerForCell(ShapeListTableCell.self)
             tableView.registerForCell(PlusTableCell.self)
 
@@ -23,6 +23,23 @@ final class ShapeListViewController: UIViewController {
                     cell.render(item)
                     return cell
                 }))
+                .store(in: &subscriptions)
+
+            tableView.didSelectRowPublisher
+                .sink { [unowned self] indexPath in
+                    tableView.deselectRow(at: indexPath, animated: true)
+                    let alert = UIAlertController(title: "Edit", message: nil, preferredStyle: .alert)
+                    alert.addTextField { textField in
+                        textField.text = self.listSubject.value[indexPath.row].name
+                    }
+                    alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { _ in
+                        if let text = alert.textFields?.first?.text, !text.isEmpty {
+                            self.listSubject.value[indexPath.row].update(newName: text)
+                        }
+                    }))
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                    self.present(alert, animated: true)
+                }
                 .store(in: &subscriptions)
         }
     }
@@ -44,5 +61,3 @@ final class ShapeListViewController: UIViewController {
             .store(in: &subscriptions)
     }
 }
-
-extension ShapeListViewController: UITableViewDelegate {}

@@ -72,9 +72,7 @@ extension FruitListViewController: UITableViewDelegate {
         switch indexPath.row {
         case list.count:
             let alert = UIAlertController(title: "Add", message: nil, preferredStyle: .alert)
-            alert.addTextField { textField in
-                textField.delegate = self
-            }
+            alert.addTextField(configurationHandler: nil)
             alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { _ in
                 if let text = alert.textFields?.first?.text, !text.isEmpty {
                     CoreDataRepository.add(FruitEntity.new(fruitName: text))
@@ -86,7 +84,6 @@ extension FruitListViewController: UITableViewDelegate {
         default:
             let alert = UIAlertController(title: "Edit", message: nil, preferredStyle: .alert)
             alert.addTextField { textField in
-                textField.delegate = self
                 textField.text = self.list[indexPath.row].name
             }
             alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { _ in
@@ -112,6 +109,3 @@ extension FruitListViewController: UITableViewDelegate {
         }
     }
 }
-
-// MARK: UITextFieldDelegate
-extension FruitListViewController: UITextFieldDelegate {}
