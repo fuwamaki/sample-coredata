@@ -21,15 +21,10 @@ final class ShapeListViewController: UIViewController {
                 .sink(receiveValue: tableView.items { [unowned self] tableView, indexPath, item in
                     switch indexPath.row {
                     case self.listSubject.value.count-1:
-                        return tableView.dequeueReusableCell(
-                            withIdentifier: PlusTableCell.defaultReuseIdentifier,
-                            for: indexPath
-                        ) as! PlusTableCell
+                        let cell: PlusTableCell = tableView.dequeueCellForIndexPath(indexPath)
+                        return cell
                     default:
-                        let cell = tableView.dequeueReusableCell(
-                            withIdentifier: ShapeListTableCell.defaultReuseIdentifier,
-                            for: indexPath
-                        ) as! ShapeListTableCell
+                        let cell: ShapeListTableCell = tableView.dequeueCellForIndexPath(indexPath)
                         cell.render(item)
                         return cell
                     }
